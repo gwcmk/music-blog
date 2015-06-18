@@ -1,0 +1,42 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12">
+			<article class="post-view">
+				<header>
+					<div class="col-sm-6">
+						<img src="{{data.post.image.url}}"> 
+					</div>
+					<div class="col-sm-6">
+						<div class="post-header">
+							<h1>{{data.post.title}}</h1>
+							<h4>{{data.post.artist}}</h4>
+							<h5 id="release-date">
+								{{date data.post.releaseDate format='MM DD YYYY'}}
+							</h5>
+							<h5>{{data.post.subtitle}}</h5>
+							<h5>
+								by {{data.post.author.name.first}} {{data.post.author.name.last}}
+							</h5>
+							<h6>
+								{{{categoryList data.post.categories prefix="Posted in "}}} on {{date data.post.publishedDate format='MM DD YYYY'}}
+							</h6>
+						</div>
+					</div>
+				</header>
+				
+			</article>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-md-12">
+			<article class="post-view">
+				<div class="post">
+					{{{data.post.content.extended}}}
+				</div>
+			</article>
+		</div>
+	</div>
+</div>
